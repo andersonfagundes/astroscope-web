@@ -67,34 +67,6 @@ function Navbar() {
             </a>
           </div>
         </details>
-        <div class="flex items-center gap-3">
-          <div class="flex items-center border border-slate-200 rounded-full px-3 py-1 dark:border-white/15">
-            <input
-              type="text"
-              placeholder="Search..."
-              class="flex-1 bg-transparent outline-none text-slate-900 dark:text-white placeholder-slate-400"
-            />
-            <button
-              type="button"
-              aria-label="Buscar"
-              class="rounded-full p-2 text-slate-500 transition hover:border-slate-300 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white"
-            >
-              <svg
-                class="h-5 w-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
       </div>
     </header>
   );
