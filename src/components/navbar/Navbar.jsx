@@ -21,19 +21,6 @@ function Navbar() {
           >
             Epic
           </a>
-          <a
-            href="#about"
-            class="transition hover:text-slate-900 dark:hover:text-white"
-          >
-            About Us
-          </a>
-
-          <a
-            href="#blog"
-            class="transition hover:text-slate-900 dark:hover:text-white"
-          >
-            Blog
-          </a>
         </nav>
         <details class="relative lg:hidden">
           <summary class="list-none cursor-pointer rounded-lg border border-slate-200 px-3 py-2 text-sm font-medium text-slate-700 dark:border-white/15 dark:text-slate-300 [&::-webkit-details-marker]:hidden">
