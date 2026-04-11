@@ -1,6 +1,6 @@
-const API_URL = 'http://localhost:5000/api/v1';
-
-export async function apiGet(endpoint, init) {
+/** Definido em `.env.development` e `.env.production` (Vite escolhe por modo). */
+const API_URL =
+  import.meta.env.VITE_API_URL ?? 'http://localhost:5000/api/v1';export async function apiGet(endpoint, init) {
   const res = await fetch(API_URL + endpoint, init);
 
   if (!res.ok) {
