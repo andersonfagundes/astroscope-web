@@ -2,7 +2,7 @@ import videoFile from '../../assets/video.mp4';
 
 function Globe() {
   return (
-    <section class="relative overflow-hidden py-20 lg:py-32">
+    <section class="relative overflow-hidden py-10 pt-10 lg:py-10 pt-10">
       <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(168,85,247,0.15),transparent)] dark:bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(168,85,247,0.25),transparent)]"></div>
       <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-4 lg:grid-cols-2 lg:gap-16 lg:px-6">
         <div>

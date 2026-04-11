@@ -1,56 +1,92 @@
+import { useEffect, useState } from 'react';
+import { getApod } from '../../services/apod.service.js';
+
 function Apod() {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const ac = new AbortController();
+    getApod(undefined, { signal: ac.signal })
+      .then(setData)
+      .catch((err) => {
+        if (err.name !== 'AbortError') {
+          setError(err.message || 'Failed to load APOD');
+        }
+      })
+      .finally(() => {
+        if (!ac.signal.aborted) setLoading(false);
+      });
+    return () => ac.abort();
+  }, []);
+
+  // Loading state
+  if (loading) {
+    return (
+      <section className="py-10 text-center">
+        <p>Loading APOD...</p>
+      </section>
+    );
+  }
+
+  // Error state
+  if (error) {
+    return (
+      <section className="py-10 text-center text-red-500">
+        <p>{error}</p>
+      </section>
+    );
+  }
+
+  // No data fallback
+  if (!data) {
+    return (
+      <section className="py-10 text-center text-slate-600 dark:text-slate-400">
+        <p>No APOD data available.</p>
+      </section>
+    );
+  }
+
+  const imageSrc = data.hdurl || data.url;
+
   return (
-    <section id="apod" className="py-20 lg:py-32">
+    <section id="apod" className="py-10 lg:py-10">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 lg:grid-cols-2 lg:gap-20 lg:px-6">
         <div>
           <p className="gradient-text text-sm font-semibold uppercase tracking-wider">
-            AI Marketing 1
+            NASA APOD
           </p>
+
+          {data.date && (
+            <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
+              {data.date.split('-').reverse().join('/')}
+            </p>
+          )}
 
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl dark:text-white">
-            Optimized Reach
+            {data.title}
           </h2>
 
-          <p className="mt-6 text-slate-600 dark:text-slate-400">
-            Segmentação preditiva e orçamento dinâmico garantem que cada real
-            investido trabalhe mais. Nossa plataforma aprende com cada campanha
-            e refina o targeting em tempo real.
-          </p>
-
-          <a
-            href="#"
-            className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-purple-600 hover:text-purple-500 dark:text-cyan-400 dark:hover:text-cyan-300"
-          >
-            Learn more
-            <svg
-              className="h-4 w-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </a>
+          {data.explanation && (
+            <p className="mt-6 text-slate-600 dark:text-slate-400">
+              {data.explanation}
+            </p>
+          )}
         </div>
 
         <div className="flex justify-center lg:justify-end">
-          <div className="relative h-72 w-72 md:h-80 md:w-80">
-            <div className="cube-glow absolute inset-0 rotate-12 rounded-3xl backdrop-blur-sm"></div>
-
-            <div
-              className="absolute inset-4 rounded-2xl border border-white/20 bg-gradient-to-br from-purple-500/20 via-transparent to-cyan-500/20 shadow-2xl"
-              style={{
-                transform: 'rotate(-6deg) perspective(600px) rotateY(-12deg)',
-              }}
-            ></div>
-
-            <div className="absolute inset-8 rounded-xl bg-gradient-to-tr from-fuchsia-500/30 to-cyan-400/40 blur-sm"></div>
-          </div>
+          {imageSrc ? (
+            <img
+              src={imageSrc}
+              alt={data.title || 'NASA APOD'}
+              className="max-h-[400px] rounded-2xl object-cover shadow-2xl"
+            />
+          ) : (
+            <p className="text-slate-500 dark:text-slate-400">
+              No media available for this entry.
+            </p>
+          )}
         </div>
       </div>
     </section>
