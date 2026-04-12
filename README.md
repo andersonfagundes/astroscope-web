@@ -20,11 +20,11 @@
 
 ## 🚀 Introduction
 
-The goal of this frontend application is to integrate with **NASA’s Open APIs** and provide an interactive platform for exploring space-related data in a clear and engaging way using **React**, **Node.js**, and **Express**.
+The goal of this application is to display data received from **NASA’s Open APIs** through a [backend](https://github.com/andersonfagundes/astroscope-api) service and provide an interactive platform for exploring space-related information in a clear and engaging way using **React**.
 
 The project includes:
 
-**React**, **Express.js**, and modern backend development practices
+**React** and modern frontend development practices
 
 1. **APOD (Astronomy Picture of the Day) API** - Fetch the NASA APOD data for a given date
 
