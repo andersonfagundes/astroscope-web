@@ -2,7 +2,16 @@
 
 <h3 align="center">Explore and visualize NASA space data through an interactive web application</h3>
 
+<div align="center">
+
+<br />
+
+<img width="1280" height="720" alt="AstroScope" src="./img.png" />
+
+<br />
+
 </div>
+
 
 ## 📋 Table of Contents
 
