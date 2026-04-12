@@ -1,4 +1,5 @@
 import Apod from '../components/apod/Apod';
+import Epic from '../components/epic/Epic';
 import Globe from '../components/globe/Globe';
 import Navbar from '../components/navbar/Navbar';
 
@@ -8,6 +9,7 @@ export default function Home() {
       <Navbar />
       <Globe />
       <Apod />
+      <Epic />
     </div>
   );
 }

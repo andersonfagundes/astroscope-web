@@ -16,7 +16,7 @@ function Navbar() {
             Apod
           </a>
           <a
-            href="#cases"
+            href="#epic"
             class="transition hover:text-slate-900 dark:hover:text-white"
           >
             Epic
@@ -34,10 +34,10 @@ function Navbar() {
               Apod
             </a>
             <a
-              href="#cases"
+              href="#epic"
               class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-white/5"
             >
-              Case Studies
+              Epic
             </a>
             <a
               href="#about"
