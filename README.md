@@ -39,8 +39,6 @@ The project includes:
 
 2. **Fetch the NASA APOD data for a given datee** - EPIC (Earth Polychromatic Imaging Camera) API
 
-You can access the backend application by clicking [here](https://github.com/andersonfagundes/astroscope-api/).
-
 ---
 
 ## ⚙️ Tech Stack
