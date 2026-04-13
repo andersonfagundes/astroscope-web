@@ -35,9 +35,7 @@ The project includes:
 
 **React** and modern frontend development practices
 
-1. **APOD (Astronomy Picture of the Day) API** - Fetch the NASA APOD data for a given date
-
-2. **Fetch the NASA APOD data for a given datee** - EPIC (Earth Polychromatic Imaging Camera) API
+1. **EPIC (Earth Polychromatic Imaging Camera)** - EPIC API delivers daily full-Earth images from the DSCOVR satellite, including rare events like lunar transits.
 
 ---
 
@@ -48,10 +46,6 @@ The project includes:
 ---
 
 ## ⚡️ Features
-
-### 🌌 Astronomy Picture of the Day (APOD)
-
-- 🔭 **Astronomy Picture of the Day** - Explore NASA’s daily featured space imagery with rich contextual information.
 
 ### 🌎 Earth Polychromatic Imaging Camera (EPIC)
 
