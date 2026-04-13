@@ -27,19 +27,6 @@ function Navbar() {
             >
               Epic
             </a>
-            <a
-              href="#about"
-              className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-white/5"
-            >
-              About Us
-            </a>
-
-            <a
-              href="#blog"
-              className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-white/5"
-            >
-              Blog
-            </a>
           </div>
         </details>
       </div>
