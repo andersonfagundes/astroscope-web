@@ -10,12 +10,6 @@ function Navbar() {
         </a>
         <nav className="hidden items-center gap-8 text-sm font-medium text-slate-600 lg:flex dark:text-slate-400">
           <a
-            href="#apod"
-            className="transition hover:text-slate-900 dark:hover:text-white"
-          >
-            Apod
-          </a>
-          <a
             href="#epic"
             className="transition hover:text-slate-900 dark:hover:text-white"
           >
@@ -27,12 +21,6 @@ function Navbar() {
             Menu
           </summary>
           <div className="absolute right-0 top-full z-50 mt-2 min-w-[12rem] rounded-xl border border-slate-200 bg-white py-2 shadow-xl dark:border-white/10 dark:bg-zinc-950">
-            <a
-              href="#apod"
-              className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-white/5"
-            >
-              Apod
-            </a>
             <a
               href="#epic"
               className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-white/5"
