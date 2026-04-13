@@ -20,7 +20,7 @@ function Globe() {
             missions.
           </p>
           <a
-            href="#apod"
+            href="#epic"
             className="mt-8 inline-flex items-center gap-2 rounded-full border border-slate-300 bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-slate-800 dark:border-white/20 dark:bg-white/10 dark:hover:bg-white/20"
           >
             Get Started
